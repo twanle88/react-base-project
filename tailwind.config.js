@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 /* eslint-disable quotes */
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   darkMode: "class",
   theme: {
     fontFamily: {
@@ -29,6 +29,12 @@ module.exports = {
       },
       fontSize: {
         14: "14px",
+        16: "16px",
+        18: "18px",
+        20: "20px",
+        24: "24px",
+        28: "28px",
+        32: "32px",
       },
       backgroundColor: {
         "main-bg": "#FAFAFA",
@@ -81,8 +87,7 @@ module.exports = {
         590: "590px",
       },
       backgroundImage: {
-        "hero-pattern":
-          "url('https://demos.wrappixel.com/premium-admin-templates/react/flexy-react/main/static/media/welcome-bg-2x-svg.25338f53.svg')",
+        "hero-pattern": "url('https://demos.wrappixel.com/premium-admin-templates/react/flexy-react/main/static/media/welcome-bg-2x-svg.25338f53.svg')",
       },
     },
   },
