@@ -80,7 +80,7 @@ module.exports = {
         unnamedComponents: 'arrow-function',
       },
     ],
-    'max-len': [2, 250],
+    'max-len': 0,
     'no-multiple-empty-lines': [
       'error',
       {

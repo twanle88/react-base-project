@@ -3,12 +3,9 @@ import axios from 'axios';
 import { getUserSession, removeUserSessionWhenExpired } from 'helpers/authHandlers';
 // import { decryptionData } from 'utils/crypto';
 
-// eslint-disable-next-line react-refresh/only-export-components
-export const { REACT_APP_API_URL } = process.env;
-
 const userSession = getUserSession();
 const axiosInstance = axios.create({
-  baseURL: REACT_APP_API_URL,
+  baseURL: process.env.REACT_APP_API_URL,
   responseType: 'json',
 });
 
