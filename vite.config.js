@@ -26,9 +26,10 @@ export default defineConfig({
       REACT_APP_FACEBOOK_APP_ID: process.env.REACT_APP_FACEBOOK_APP_ID,
       REACT_APP_RECAPTCHA_SITE_KEY: process.env.REACT_APP_RECAPTCHA_SITE_KEY,
       REACT_APP_RECAPTCHA_SECRET_KEY: process.env.REACT_APP_RECAPTCHA_SECRET_KEY,
-      REACT_APP_STRIPE_PUBLIC_KEY: process.env.REACT_APP_STRIPE_PUBLIC_KEY,
       REACT_APP_API_IMAGE_URL: process.env.REACT_APP_API_IMAGE_URL,
       REACT_APP_TIME_FETCH_NOTI: process.env.REACT_APP_TIME_FETCH_NOTI,
+      REACT_APP_ENCRYPT_KEY: process.env.REACT_APP_ENCRYPT_KEY,
+      REACT_APP_DECRYPT_KEY: process.env.REACT_APP_DECRYPT_KEY,
       // ...process.env,
     },
   },
@@ -39,46 +40,24 @@ export default defineConfig({
   resolve: {
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json'],
     alias: [{
-      find: 'components',
-      replacement: resolve(__dirname, 'src/components'),
-    },
-    {
-      find: 'api',
-      replacement: resolve(__dirname, 'src/api'),
-    },
-    {
-      find: 'views',
-      replacement: resolve(__dirname, 'src/views'),
-    },
-    {
-      find: 'utils',
-      replacement: resolve(__dirname, 'src/utils'),
-    },
-    // {
-    //   find: 'redux',
-    //   replacement: resolve(__dirname, 'src/redux'),
-    // },
-    {
-      find: 'reduxz',
-      replacement: resolve(__dirname, 'src/reduxz'),
-    },
-    {
+      find: 'apis',
+      replacement: resolve(__dirname, 'src/apis'),
+    }, {
       find: 'assets',
       replacement: resolve(__dirname, 'src/assets'),
-    },
-    {
-      find: 'routes',
-      replacement: resolve(__dirname, 'src/routes'),
-    },
-    {
-      find: 'layouts',
-      replacement: resolve(__dirname, 'src/layouts'),
-    },
-    {
-      find: 'translations',
-      replacement: resolve(__dirname, 'src/translations'),
-    },
-    ],
+    }, {
+      find: 'components',
+      replacement: resolve(__dirname, 'src/components'),
+    }, {
+      find: 'helpers',
+      replacement: resolve(__dirname, 'src/helpers'),
+    }, {
+      find: 'reduxes',
+      replacement: resolve(__dirname, 'src/reduxes'),
+    }, {
+      find: 'utils',
+      replacement: resolve(__dirname, 'src/utils'),
+    }],
   },
   plugins: [
     react(),

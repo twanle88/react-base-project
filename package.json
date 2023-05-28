@@ -13,6 +13,8 @@
     "postinstall": "husky install"
   },
   "dependencies": {
+    "@caixue/react-loadable": "^1.1.1",
+    "@reduxjs/toolkit": "^1.9.5",
     "antd": "^5.5.1",
     "axios": "^1.4.0",
     "crypto-js": "^4.1.1",
@@ -37,6 +39,7 @@
   },
   "lint-staged": {
     "*.{js,jsx}": [
+      "npm run lint",
       "npm run lint:fix",
       "git add ."
     ]

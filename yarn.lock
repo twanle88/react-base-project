@@ -323,6 +323,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@caixue/react-loadable@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "@caixue/react-loadable@npm:1.1.1"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.1 || ^18.0.0
+  checksum: d518d89b40f1ae085ad19b8dc5b6622a1f01357e090b38cb39344ac70d65ae2dcdef30d2212c3f96e39c5d0bc2ae40177eefc9382ef7122f1a2b4a168763a325
+  languageName: node
+  linkType: hard
+
 "@commitlint/cli@npm:^17.6.3":
   version: 17.6.3
   resolution: "@commitlint/cli@npm:17.6.3"
@@ -1007,6 +1016,26 @@ __metadata:
     react: ">=16.9.0"
     react-dom: ">=16.9.0"
   checksum: f804d7a6c51e374747a583556bda845879e3a789532b1e690b20c790b3149858f8c7079293afd29a9601a53045cae8fa88c6dfed13f21cca1e683afab439f818
+  languageName: node
+  linkType: hard
+
+"@reduxjs/toolkit@npm:^1.9.5":
+  version: 1.9.5
+  resolution: "@reduxjs/toolkit@npm:1.9.5"
+  dependencies:
+    immer: ^9.0.21
+    redux: ^4.2.1
+    redux-thunk: ^2.4.2
+    reselect: ^4.1.8
+  peerDependencies:
+    react: ^16.9.0 || ^17.0.0 || ^18
+    react-redux: ^7.2.1 || ^8.0.2
+  peerDependenciesMeta:
+    react:
+      optional: true
+    react-redux:
+      optional: true
+  checksum: 54672c5593d05208af577e948a338f23128d3aa01ef056ab0d40bcfa14400cf6566be99e11715388f12c1d7655cdf7c5c6b63cb92eb0fecf996c454a46a3914c
   languageName: node
   linkType: hard
 
@@ -1858,8 +1887,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "base-shop-reat@workspace:."
   dependencies:
+    "@caixue/react-loadable": ^1.1.1
     "@commitlint/cli": ^17.6.3
     "@commitlint/config-conventional": ^17.6.3
+    "@reduxjs/toolkit": ^1.9.5
     "@types/react": ^18.0.28
     "@types/react-dom": ^18.0.11
     "@vitejs/plugin-react-swc": ^3.0.0
@@ -3805,6 +3836,13 @@ __metadata:
   bin:
     image-size: bin/image-size.js
   checksum: 6709d5cb73e96d5097ae5e9aa746dd36d6a9c8cf645e7eecac72ea07dbd6f312a65183752762fa92e2f3b698d4ed8d85dd55bf5207b6367245996bd16576d8fe
+  languageName: node
+  linkType: hard
+
+"immer@npm:^9.0.21":
+  version: 9.0.21
+  resolution: "immer@npm:9.0.21"
+  checksum: 70e3c274165995352f6936695f0ef4723c52c92c92dd0e9afdfe008175af39fa28e76aafb3a2ca9d57d1fb8f796efc4dd1e1cc36f18d33fa5b74f3dfb0375432
   languageName: node
   linkType: hard
 
@@ -6486,6 +6524,13 @@ __metadata:
   version: 2.0.2
   resolution: "require-from-string@npm:2.0.2"
   checksum: a03ef6895445f33a4015300c426699bc66b2b044ba7b670aa238610381b56d3f07c686251740d575e22f4c87531ba662d06937508f0f3c0f1ddc04db3130560b
+  languageName: node
+  linkType: hard
+
+"reselect@npm:^4.1.8":
+  version: 4.1.8
+  resolution: "reselect@npm:4.1.8"
+  checksum: a4ac87cedab198769a29be92bc221c32da76cfdad6911eda67b4d3e7136dca86208c3b210e31632eae31ebd2cded18596f0dd230d3ccc9e978df22f233b5583e
   languageName: node
   linkType: hard
 
