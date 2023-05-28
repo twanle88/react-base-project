@@ -52,8 +52,23 @@ export default defineConfig({
       find: 'helpers',
       replacement: resolve(__dirname, 'src/helpers'),
     }, {
+      find: 'hooks',
+      replacement: resolve(__dirname, 'src/hooks'),
+    }, {
+      find: 'layouts',
+      replacement: resolve(__dirname, 'src/layouts'),
+    }, {
+      find: 'pages',
+      replacement: resolve(__dirname, 'src/pages'),
+    }, {
+      find: 'providers',
+      replacement: resolve(__dirname, 'src/providers'),
+    }, {
       find: 'reduxes',
       replacement: resolve(__dirname, 'src/reduxes'),
+    }, {
+      find: 'routes',
+      replacement: resolve(__dirname, 'src/routes'),
     }, {
       find: 'utils',
       replacement: resolve(__dirname, 'src/utils'),

@@ -1,24 +1,24 @@
 import { message } from 'antd';
 import axios from 'axios';
-import { getUserSession, removeUserSessionWhenExpired } from 'helpers/user';
+import { getUserSession, removeUserSessionWhenExpired } from 'helpers/authHandlers';
 // import { decryptionData } from 'utils/crypto';
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const { REACT_APP_API_URL } = process.env;
 
 const userSession = getUserSession();
-const ApiService = axios.create({
+const axiosInstance = axios.create({
   baseURL: REACT_APP_API_URL,
   responseType: 'json',
 });
 
-ApiService.defaults.timeout = 20000;
+axiosInstance.defaults.timeout = 20000;
 
 if (userSession) {
-  ApiService.defaults.headers.common.Authorization = `Bearer ${getUserSession()}`;
+  axiosInstance.defaults.headers.common.Authorization = `Bearer ${getUserSession()}`;
 }
 
-ApiService.defaults.transformResponse = (data) => {
+axiosInstance.defaults.transformResponse = (data) => {
   data = JSON.parse(data);
   // nếu như có mã data thì dùng cái này
   // if (data?.iv) {
@@ -31,7 +31,7 @@ ApiService.defaults.transformResponse = (data) => {
   return data;
 };
 
-ApiService.interceptors.response.use(
+axiosInstance.interceptors.response.use(
   (response) => response,
   (error) => {
     if (process.env.NODE_ENV === 'development') {
@@ -55,4 +55,4 @@ ApiService.interceptors.response.use(
   },
 );
 
-export default ApiService;
+export { axiosInstance };
