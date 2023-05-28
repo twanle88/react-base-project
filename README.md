@@ -32,6 +32,16 @@ yarn test
 yarn build
 ```
 
+### Check eslint error
+```bash
+yarn lint
+```
+
+### Fix possible
+```bash
+yarn lint:fix
+```
+
 # Commit code
 ## Theo chuẩn Angular (chuẩn mà ta sử dụng ở bài này), 1 commit message sẽ theo cấu trúc như sau:
 
