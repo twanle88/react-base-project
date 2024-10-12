@@ -14,6 +14,8 @@ const App = () => {
   console.log('this is accessToken', accessToken);
   console.log('this is profile', profile);
 
+
+
   return (
     <ConfigProvider
       renderEmpty={() => (
@@ -41,7 +43,7 @@ const App = () => {
                 <UnauthorizedLayout tabTitle={item.name}>
                   <item.component />
                 </UnauthorizedLayout>
-            )}
+              )}
               key={item.name}
             />
           ))}
@@ -59,7 +61,7 @@ const App = () => {
                 <MainLayout tabTitle={item.name}>
                   <item.component />
                 </MainLayout>
-                      )}
+              )}
               loader={SpinnerLoader}
             />
             {/* </Route> */}
