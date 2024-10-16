@@ -1,0 +1,189 @@
+.film-detail-container {
+    .film-detail-header {
+        font-family: 'roboto';
+    }
+
+    .film-detail-image {
+        position: relative;
+        .film-detail-image-large {
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background-color: rgba(0,0,0,0.3);
+            }
+
+            .play-icon {
+                width: 50px;
+                height: 50px;
+                background-color: #FF9601BF;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin: -25px 0 0 -25px;
+                cursor: pointer;
+                opacity: .7;
+                scale: 1.5;
+                transition: all .3s ease-in-out;
+
+                &:hover {
+                    scale: 1.7;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    border: 15px solid transparent;
+                    border-left: 20px solid #fff;
+                    margin: -15px 0 0 -6px;
+                }
+            }
+        }
+        .film-detail-title {
+            position: absolute;
+            bottom: 1%;
+            left: 1%;
+            display: flex;
+            .film-detail-image-small {
+                background-image: url('https://img.phimmoichill.com/images/film/ong-trum-giang-ho-phan-2.jpg');
+                border: 1px solid white;
+                width: 250px;
+                height: 150px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                
+            }
+        }
+    }
+
+    .film-infomation {
+        .film-info {
+            display: flex;
+            border-bottom: 1px solid #3a3a3a;
+            .film-info-cols {
+                flex: 0 0 calc(100% / 3);
+                .film-info-items {
+                    display: flex;
+                    
+                    .film-info-item {
+                        display: inline-block;
+                        margin-bottom: 5px;
+                        &.special-red {
+                            color: #FF0000 !important;
+                        }
+                        &.special-imdb {
+                            background-color: #E3B71E !important;
+                            padding: 3px !important;
+                            color: black !important;
+                            border-radius: 4px !important;
+                            font-size: 12px !important;
+                            font-weight: 700 !important;
+                        }
+                        &:first-child {
+                            color: #fff;
+                            font-size: 13px;
+                            font-weight: 700;
+                            text-wrap: nowrap;
+                        }
+                        &:last-child {
+                            margin-left: 4px;
+                            color: #828282;
+                            font-size: 14px;
+                            &:hover {
+                                cursor: pointer;
+                                color: #ff9601;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        .film-suggest {
+            .film-suggest-more {
+                border: 1px solid #ff9601;
+                height: 38px;
+                align-items: center;
+            }
+        }
+    
+        .film-description {
+            border-bottom: 1px solid #3a3a3a;
+        }
+    
+        .film-tag {
+            border-bottom: 1px solid #3a3a3a;
+        }
+    }
+
+    .film-comment-wrap {
+        font-family: 'Helvetica, Arial, sans-serif';
+        .film-comment{
+            .film-comment-top {
+                border-bottom: 1px solid #e9ebee;
+                .sort-box {
+                    background-color: #f5f6f7;
+                    border: 1px solid #ccd0d5;
+                    color: #4b4f56;
+                }
+            }
+            .film-comment-main {
+                border-bottom: 1px solid #e9ebee;
+                .comment {
+                    font-size: 14px;
+                    line-height: 1.358;
+                    word-break: break-word;
+                    word-wrap: break-word;
+                    width: 100%;
+                    textarea {
+                        box-sizing: border-box;
+                        vertical-align: top;
+                        width: 100%;
+                        border: 1px solid #d3d6db;
+                        word-wrap: break-word;
+                        min-height: 48px;
+                        font-size: 16px;
+                        padding: 12px 8px;
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .film-detail-bottom {
+        .slider-bottom {
+            border-top: 1px solid #4c4c4c;
+        }
+    }
+
+    @media (max-width:1280px) {
+        .film-detail-image {
+            .film-detail-image-large {
+                .play-icon {
+                    width: 35px;
+                    height: 35px;
+                    margin: 0;
+                    top: 5%;
+                    left: 91%;
+                    &::after {
+                        border: 10.5px solid transparent;
+                        border-left: 15px solid #fff;
+                        margin: -10px 0 0 -5px;
+                    }
+                }
+            }
+        }
+        .film-info {
+            flex-direction: column;
+            color: #1c1e21;
+        }
+    }
+}
