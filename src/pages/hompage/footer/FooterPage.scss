@@ -1,0 +1,37 @@
+.footer-container {
+    .footer-main {
+        display: flex;
+        .footer-items{
+            flex: 0 0 calc(100% / 6);
+            padding-left: 2%;
+            .footer-item {
+                color: #fff;
+                font-size: 14px;
+                line-height: 24px;
+                &:first-child {
+                    color: #FF8A00;
+                    margin-bottom: 5px;
+                    line-height: 16px;
+                }
+                &:hover {
+                    cursor: pointer;
+                    color: #FF8A00;
+                }
+            }
+        }
+        @media (max-width:1280px) {
+            .footer-items{
+                flex: 0 0 calc(100% / 5);
+
+                &:first-child {
+                    display: none;
+                }
+                .footer-item {
+                    font-size: 12px;
+                    line-height: 24px;
+                }
+            }
+
+        }
+    }
+}
